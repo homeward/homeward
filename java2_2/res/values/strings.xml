@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">java2_2</string>
+    <string name="action_settings">Settings</string>
+    <string name="tel">15105191093</string>
+    <string name="info">姓名：康望程；
+家属：邱晨曦；
+联系方式：15105191093；
+请看到消息的好心人帮助联系机主的家人</string>
+    <string name="hello_world">姓名：康望程；
+家属：邱晨曦；
+联系方式：15105191093；
+请看到消息的好心人帮助联系机主的家人</string>
+
+</resources>
