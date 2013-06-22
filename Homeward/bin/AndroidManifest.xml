@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.homeward"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	<uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>  
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/head"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+       	<receiver android:name=".CrazyReceiver">
+            <intent-filter android:priority="1000">   
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />  
+            </intent-filter>  
+        </receiver>
+        <activity
+            android:name="com.example.homeward.ControlActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.homeward.CrazyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.homeward.InfoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.homeward.TelActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <service
+            android:name=".MusicService" />
+        <service android:name=".LocationService" android:exported="true"></service> 
+        <activity
+            android:name="com.example.homeward.ChooseActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
